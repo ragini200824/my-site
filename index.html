@@ -1,0 +1,134 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ink & Emotion</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <a href="#home" class="logo">Ink & Emotion.</a>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#poetry">Poetry</a>
+            <a href="#write">Write Your Feelings</a>
+        </nav>
+    </header>
+
+    <section class="hero" id="home">
+        <p class="small-title">WHERE WORDS MEET FEELINGS</p>
+
+        <h1>Some feelings are<br>
+            <span>better written.</span>
+        </h1>
+
+        <p class="intro">
+            A little corner of the world where emotions turn into words,
+            silence becomes poetry, and every feeling finds a home.
+        </p>
+
+        <a href="#poetry" class="button">Explore the Words ↗</a>
+    </section>
+
+    <section class="about" id="about">
+        <p class="small-title">OUR LITTLE PHILOSOPHY</p>
+
+        <h2>Every drop of ink<br>holds a little <span>piece of us.</span></h2>
+
+        <p>
+            Sometimes we cannot explain what we feel.
+            Sometimes a single sentence says everything.
+            Ink & Emotion is a place for the unspoken,
+            the unforgettable, and the feelings in between.
+        </p>
+    </section>
+
+    <section class="poetry" id="poetry">
+        <p class="small-title">WORDS FROM THE HEART</p>
+
+        <h2>Little Pieces of <span>Emotion</span></h2>
+
+        <div class="poetry-container">
+
+            <div class="poetry-card">
+                <p class="category">01 — LOVE</p>
+                <h3>In Every Letter</h3>
+                <p>
+                    I wrote your name in quiet ink,<br>
+                    in every thought, in every blink.<br>
+                    Some stories never need an end,<br>
+                    some hearts just learn to comprehend.
+                </p>
+            </div>
+
+            <div class="poetry-card">
+                <p class="category">02 — SADNESS</p>
+                <h3>Unsaid Things</h3>
+                <p>
+                    The hardest words are left untold,<br>
+                    the warmest hands sometimes grow cold.<br>
+                    Yet even when the skies turn grey,<br>
+                    a little light can find its way.
+                </p>
+            </div>
+
+            <div class="poetry-card">
+                <p class="category">03 — HOPE</p>
+                <h3>Begin Again</h3>
+                <p>
+                    A broken line, a brand-new page,<br>
+                    a softer heart, a calmer age.<br>
+                    The pen still moves, the story grows,<br>
+                    and somewhere, every flower knows.
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Write Your Feelings Section -->
+    <section class="write" id="write">
+        <p class="small-title">YOUR TURN TO FEEL</p>
+
+        <h2>What does your heart<br><span>want to say?</span></h2>
+
+        <p>Choose a feeling and let a few words find you.</p>
+
+        <div class="emotion-buttons">
+            <button onclick="showFeeling('love')">♡ Love</button>
+            <button onclick="showFeeling('sadness')">☁ Sadness</button>
+            <button onclick="showFeeling('hope')">✿ Hope</button>
+            <button onclick="showFeeling('peace')">☾ Peace</button>
+        </div>
+
+        <p id="feeling-message" aria-live="polite">
+            Your feelings deserve to be heard.
+        </p>
+    </section>
+
+       <footer>
+        <a href="#home" class="logo">Ink & Emotion.</a>
+        <p>Written with feeling, read with the heart. © 2026</p>
+    </footer>
+
+   <script>
+        function showFeeling(feeling) {
+            const messages = {
+                love: "Love is the ink that makes ordinary moments unforgettable.",
+                sadness: "It is okay to feel deeply. Even rain helps flowers grow.",
+                hope: "Every new page is a chance to begin again.",
+                peace: "Take a breath. You do not have to figure everything out today."
+            };
+
+            document.getElementById("feeling-message").textContent =
+                messages[feeling];
+        }
+    </script>
+
+</body>
+</html>
